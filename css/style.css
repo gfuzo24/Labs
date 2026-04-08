@@ -1,7 +1,7 @@
 .main {
   background-color: #ffffff;
-  width: 1600px;
-  height: 4293px;
+  width: 100%;
+  height: auto;
   position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifz;
 }
@@ -27,7 +27,7 @@
   position: absolute;
   top: 2644px;
   right: 0;
-  width: 1600px;
+  width: 100%;
   height: 715px;
 }
 
@@ -238,7 +238,7 @@
 }
 
 .main .frame-3 {
-  width: 1600px;
+  width: 100%;
   gap: 36px;
   padding: 80px 100px 120px;
   position: absolute;
@@ -899,5 +899,411 @@ top: 30px;
 .main .logo-vr{
   display: flex;
   margin: -60px;
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive overrides */
+.main {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.main .group {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+  padding: 20px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.main .group .header,
+.main .header,
+.main .header-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.main .group .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.main .group .nav-menu ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main .group .nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.main .group .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: min(100%, 660px);
+}
+
+.hero-text_1,
+.hero-text_2 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.main .group .hero .cta-btn,
+.main .cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background-color: var(--teal-4);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: var(--white);
+  min-height: 45px;
+}
+
+.main .text-wrapper-2 {
+  margin: 0;
+  font-family: "Nunito Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--white);
+  font-size: 18px;
+  line-height: normal;
+}
+
+.main .meliorit {
+  position: relative;
+  width: min(100%, 640px);
+  max-width: 100%;
+  margin: 40px auto 0;
+  height: auto;
+  object-fit: contain;
+}
+
+.main .faq {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.main .faq__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
+  gap: 60px;
+}
+
+.main .faq__title {
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+}
+
+.main .div {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 450px);
+  gap: 29px;
+  padding: 58px;
+  margin: 40px auto 0;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.main .frame-2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.main .rectangle {
+  width: 100%;
+  max-width: 180px;
+}
+
+.main .popular-models,
+.main .popular-models-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  padding: 80px 20px;
+}
+
+.main .popular-models {
+  background-color: var(--grey-4);
+}
+
+.main .popular-models-2 {
+  background-color: var(--white);
+}
+
+.main .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.main .frame-wrapper {
+  width: auto;
+}
+
+.main .frame-6 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.main .frame-7 {
+  width: min(335px, 100%);
+  max-width: 100%;
+}
+
+.main .frame-10 {
+  width: 100%;
+}
+
+.main .frame-11 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.main .frame-12 {
+  width: min(320px, 100%);
+}
+
+.main .union {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.main .cta-btn-wrapper {
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .main .group {
+    padding: 20px 40px;
+  }
+
+  .main .faq__inner {
+    gap: 40px;
+  }
+
+  .main .frame-2 {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 880px) {
+  .main .group {
+    padding: 20px 24px;
+  }
+
+  .main .group .header,
+  .main .header,
+  .main .header-2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main .group .nav-menu ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main .faq__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .main .div,
+  .main .frame-7,
+  .main .frame-12 {
+    width: 100%;
+  }
+
+  .main .cta-btn-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .main .group {
+    padding: 16px;
+  }
+
+  .main .group .nav-menu {
+    gap: 12px;
+  }
+
+  .main .group .hero {
+    gap: 16px;
+  }
+
+  .main .frame-2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .main .rectangle {
+    max-width: 100%;
+  }
+
+  .main .cta-btn {
+    width: 100%;
+  }
+
+  .main .header,
+  .main .header-2 {
+    padding: 0;
+  }
 }
