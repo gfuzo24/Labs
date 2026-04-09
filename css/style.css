@@ -3,6 +3,7 @@
   width: 100%;
   height: auto;
   position: relative;
+  overflow-x: hidden;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifz;
 }
 
@@ -25,7 +26,7 @@
 
 .main .frame {
   position: absolute;
-  top: 2644px;
+  top: auto;
   right: 0;
   width: 100%;
   height: 715px;
@@ -133,7 +134,7 @@
 .main .div {
 
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   gap: 29px;
   padding: 58px;
   position: flex;
@@ -144,6 +145,13 @@
   border-radius: 5px;
   box-shadow: 0px 15px 30px #0000001a;
 }
+
+.main .div .p{
+  display: flex;
+
+  align-items: flex-start;
+}
+
 
 .main .text-wrapper {
   position: flex;
@@ -1141,9 +1149,11 @@ top: 30px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px;
   width: 100%;
+  max-width: auto;
+  margin: 0 auto;
 }
 
 .main .rectangle {
@@ -1247,6 +1257,10 @@ top: 30px;
 }
 
 @media (max-width: 880px) {
+  .main .frame-14 .div-2 {
+    flex-direction: column;
+    gap: 20px;
+  }
   .main .group {
     padding: 20px 24px;
   }
@@ -1269,7 +1283,8 @@ top: 30px;
 
   .main .div,
   .main .frame-7,
-  .main .frame-12 {
+  .main .frame-12,
+  .main .frame-14 {
     width: 100%;
   }
 
@@ -1280,6 +1295,8 @@ top: 30px;
 
 @media (max-width: 640px) {
     
+  
+
   .main .group {
     padding: 16px;
   }
@@ -1305,9 +1322,18 @@ top: 30px;
     width: 100%;
   }
 
+  .main .cta-btn-wrapper {
+    justify-content: center;
+    gap: 12px;
+    padding: 0 15px;
+  }
+
   .main .header,
   .main .header-2 {
     padding: 0;
+  }
+  .main .frame-14{
+    width: 100%;
   }
 }
 
@@ -1318,6 +1344,7 @@ top: 30px;
     height: auto;
     display: flex;
     flex-direction: column;
+    margin: 0;
   }
 
   /* Делаем все основные секции блочными, чтобы они шли друг за другом */
@@ -1390,6 +1417,23 @@ top: 30px;
     width: 100% !important;
     text-align: center;
   }
+
+  /* Адаптация футера */
+  .main .frame-14 .div-2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main .frame-14 .frame-15 .div2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main .frame-14 .text-wrapper-14 {
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+  }
 }
 
 .news-swiper {
@@ -1397,3 +1441,16 @@ top: 30px;
   max-width: 100%;
   overflow: hidden;
 }
+
+.subscriptions-swiper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+ .main .div,
+  .main .frame-7,
+  .main .frame-12,
+  .main .frame-14 {
+    width: 100%;
+  }

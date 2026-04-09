@@ -35,8 +35,8 @@
           </header>
           <div class="hero">
             <div class="hero-text">
-              <img class='hero-text_1'src="img/text-2-1.svg">
-              <img class='hero-text_2' src="img/text-2-2.svg">
+              <img class="hero-text_1" src="img/text-2-1.svg">
+              <img class="hero-text_2" src="img/text-2-2.svg">
 
               <button class="cta-btn" type="button" aria-label="Читать статью">
               <span class="text-wrapper-2">Читать статью</span>
@@ -186,33 +186,26 @@
           </button>
         </header>
         <div class="content" role="region" aria-label="Список подписок">
-
-          <div class="frame-wrapper">
-            <div class="icon-arrow-left-h-wrapper">
-              <button class="icon-arrow-left-h" type="button" aria-label="Предыдущие подписки">
-                <img class="vector" src="img/vector-1.svg" alt="" aria-hidden="true" />
-              </button>
+          <div class="swiper subscriptions-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="frame-12">
+                  <img class="union" src="img/union-2.svg" alt="" />
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="frame-12">
+                  <img class="union" src="img/image-1.svg" alt="" />
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="frame-12">
+                  <img class="union" src="img/union.svg" alt="" />
+                </article>
+              </div>
             </div>
-          </div>
-          <div class="frame-10">
-            <div class="frame-11">
-              <article class="frame-12">
-                      <img class="union" src="img/union-2.svg" alt="" />
-              </article>
-              <article class="frame-12">
-                      <img class="union" src="img/image-1.svg" alt="" />
-              </article>
-              <article class="frame-12">
-                      <img class="union" src="img/union.svg" alt="" />
-              </article>
-            </div>
-          </div>
-          <div class="frame-wrapper">
-            <div class="icon-arrow-left-h-wrapper">
-              <button class="icon-arrow-left-h" type="button" aria-label="Следующие подписки">
-                <img class="vector" src="img/vector-1-3.svg" alt="" aria-hidden="true" />
-              </button>
-            </div>
+            <div class="swiper-button-next subscriptions-next"></div>
+            <div class="swiper-button-prev subscriptions-prev"></div>
           </div>
         </div>
         <div class="cta-btn-wrapper">
@@ -315,7 +308,7 @@
               <div class="img">
                 <img class="img-2" src="img/map-pin.svg" alt="" aria-hidden="true" />
               </div>
-              <p class="text-wrapper-14">Адрес: 115201, Россия, Москва, Котляковская улица, 6, стр. 8</p>
+              <p class="text-wrapper-14">Адрес: 115201, Россия, Москва, <br>Котляковская улица, 6, стр. 8</p>
             </div>
             <div class="frame-13">
               <div class="img">
@@ -387,6 +380,25 @@
           1024: {
             slidesPerView: 4,
             spaceBetween: 40,
+          },
+        },
+      });
+
+      const subscriptionsSwiper = new Swiper('.subscriptions-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.subscriptions-next',
+          prevEl: '.subscriptions-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
         },
       });
