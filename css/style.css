@@ -1391,3 +1391,9 @@ top: 30px;
     text-align: center;
   }
 }
+
+.news-swiper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}

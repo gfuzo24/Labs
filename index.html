@@ -263,22 +263,38 @@
 
       <section class="frame-3" aria-labelledby="news-title">
         <h2 class="text-wrapper-3" id="news-title">Новости</h2>
-        <div class="frame-4">
-          <article class="div-wrapper">
-            <h3 class="palo-alto-CN">Контейнерные<br />межсетевые<br />экраны Palo Alto<br />серии CN</h3>
-          </article>
-          <article class="frame-5">
-            <p class="text-wrapper-4">Защита от узвимости CVE-2021-34527, публично известной как «Print Nightmare»</p>
-          </article>
-          <article class="div-wrapper">
-            <p class="text-wrapper-4">Новая линейка межсетевых экранов Palo Alto PA-400 Series</p>
-          </article>
-          <article class="div-wrapper">
-            <p class="text-wrapper-4">Что такое Next Generation Firewall?</p>
-          </article>
-          <article class="div-wrapper">
-            <h3 class="palo-alto-CN">Контейнерные<br />межсетевые<br />экраны Palo Alto<br />серии CN</h3>
-          </article>
+        <div class="content" role="region" aria-label="Список новостей">
+          <div class="swiper news-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="div-wrapper">
+                  <h3 class="palo-alto-CN">Контейнерные<br />межсетевые<br />экраны Palo Alto<br />серии CN</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="frame-5">
+                  <p class="text-wrapper-4">Защита от узвимости CVE-2021-34527, публично известной как «Print Nightmare»</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="div-wrapper">
+                  <p class="text-wrapper-4">Новая линейка межсетевых экранов Palo Alto PA-400 Series</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="div-wrapper">
+                  <p class="text-wrapper-4">Что такое Next Generation Firewall?</p>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="div-wrapper">
+                  <h3 class="palo-alto-CN">Контейнерные<br />межсетевые<br />экраны Palo Alto<br />серии CN</h3>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-button-next news-next"></div>
+            <div class="swiper-button-prev news-prev"></div>
+          </div>
         </div>
       </section>
       <footer class="frame-14" aria-label="Подвал сайта">
@@ -335,6 +351,29 @@
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        },
+      });
+
+      const newsSwiper = new Swiper('.news-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.news-next',
+          prevEl: '.news-prev',
         },
         breakpoints: {
           640: {
