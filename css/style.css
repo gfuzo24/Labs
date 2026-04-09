@@ -15,11 +15,11 @@
 }
 
 .main .meliorit {
-  position: absolute;
-  top: 788px;
-  left: 243px;
-  width: 591px;
-  height: 515px;
+  position: flex;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
   object-fit: cover;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .main .frame.faq {
-  top: 2600px;
+  top: 2775px;
 }
 
 .main .faq {
@@ -131,22 +131,23 @@
 }
 
 .main .div {
-  flex-direction: column;
-  width: 450px;
+
+  width: 100%;
   align-items: flex-start;
   gap: 29px;
   padding: 58px;
-  position: absolute;
-  top: 843px;
-  left: 912px;
+  position: flex;
+  top: auto;
+  left: auto;
+  right: auto;
   background-color: var(--white);
   border-radius: 5px;
   box-shadow: 0px 15px 30px #0000001a;
 }
 
 .main .text-wrapper {
-  position: relative;
-  align-self: stretch;
+  position: flex;
+  align-self: right;
   margin-top: -1.00px;
   font-family: var(--h3-font-family);
   font-weight: var(--h3-font-weight);
@@ -990,7 +991,7 @@ top: 30px;
 
 
 
-/* Responsive overrides */
+/*  */
 .main {
   width: 100%;
   max-width: 100%;
@@ -1151,7 +1152,8 @@ top: 30px;
 }
 
 .main .popular-models,
-.main .popular-models-2 {
+.main .popular-models-2, 
+.main .frame.faq {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1277,6 +1279,7 @@ top: 30px;
 }
 
 @media (max-width: 640px) {
+    
   .main .group {
     padding: 16px;
   }
@@ -1305,5 +1308,86 @@ top: 30px;
   .main .header,
   .main .header-2 {
     padding: 0;
+  }
+}
+
+/* Адаптив для мобильных устройств (320px и выше) */
+@media (max-width: 320px) {
+  /* Сбрасываем фиксированную высоту у главного контейнера */
+  .main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Делаем все основные секции блочными, чтобы они шли друг за другом */
+  .main .group,
+  .main .div,
+  .main .popular-models,
+  .main .popular-models-2,
+  .main .faq,
+  .main .frame-3,
+  .main .frame-14,
+  .main .footer {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 40px 15px !important; /* Внутренние отступы для мобилок */
+    margin: 0 auto !important;
+  }
+
+  /* Исправляем блок "Помощь в выборе" (который был перекрыт) */
+  .main .div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+  }
+
+  /* Скрываем или адаптируем декоративную картинку meliorit, если она мешает */
+  .main .meliorit {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 20px;
+  }
+
+  /* Центрируем заголовки и тексты */
+  .main .text-wrapper, 
+  .main .text-wrapper-2, 
+  .main .p {
+    width: 100% !important;
+    text-align: center !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  /* Адаптация кнопок */
+  .main .overlap-group, 
+  .main .overlap-2 {
+    position: relative !important;
+    margin: 20px auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  /* Сетка карточек в популярных моделях */
+  .main .frame-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Футер в одну колонку */
+  .main .footer .frame-12 {
+    width: 100% !important;
+    text-align: center;
   }
 }
